@@ -4,7 +4,7 @@
 	error_reporting(E_ALL);
 	date_default_timezone_set("Asia/Bangkok");
 
-	$sToken = "UAXk4pj1wgnBu5FXjL9U23MalMJo6Kb4yK1kN1ZVSfI";
+	$sToken = "C3bnBm2FevZAVCXFkA7LYNnKwPQ70zSinHjKy4yFNmT";
 	$sMessage = "ทดสอบข้อความฉุกเฉิน";
 
 	
