@@ -1,6 +1,6 @@
 <?php
 
-	$data = $_POST['data'];
+	$sMessage = $_POST['sMessage'];
 
 	ini_set('display_errors', 1);
 	ini_set('display_startup_errors', 1);
@@ -8,7 +8,7 @@
 	date_default_timezone_set("Asia/Bangkok");
 
 	$sToken = "C3bnBm2FevZAVCXFkA7LYNnKwPQ70zSinHjKy4yFNmT";
-	$sMessage = $data;
+	//$sMessage = "ข้อความฉุกเฉิน";
 	
 	$chOne = curl_init(); 
 	curl_setopt( $chOne, CURLOPT_URL, "https://notify-api.line.me/api/notify"); 
