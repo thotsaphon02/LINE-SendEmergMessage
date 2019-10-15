@@ -10,7 +10,7 @@
 
 	$sToken = "C3bnBm2FevZAVCXFkA7LYNnKwPQ70zSinHjKy4yFNmT";
 	//$sMessage = "ทดสอบข้อความฉุกเฉิน";
-	//$sMessage = " ข้อความฉุกเฉิน !! $data"
+	$sMessage = " ข้อความฉุกเฉิน !! $sMessage"
 	
 	$chOne = curl_init(); 
 	curl_setopt( $chOne, CURLOPT_URL, "https://notify-api.line.me/api/notify"); 
