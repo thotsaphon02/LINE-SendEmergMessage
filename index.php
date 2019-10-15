@@ -1,7 +1,6 @@
 <?php
 
 	$data = $_POST['data'];
-    	$sMessage = $_POST['sMessage'];
 
 	ini_set('display_errors', 1);
 	ini_set('display_startup_errors', 1);
@@ -10,14 +9,14 @@
 
 	$sToken = "C3bnBm2FevZAVCXFkA7LYNnKwPQ70zSinHjKy4yFNmT";
 	//$sMessage = "ทดสอบข้อความฉุกเฉิน";
-	$sMessage += "ข้อความฉุกเฉิน !!{$data}";
+	$sMessage = array("ข้อความฉุกเฉิน {$data}");
 	
 	$chOne = curl_init(); 
 	curl_setopt( $chOne, CURLOPT_URL, "https://notify-api.line.me/api/notify"); 
 	curl_setopt( $chOne, CURLOPT_SSL_VERIFYHOST, 0); 
 	curl_setopt( $chOne, CURLOPT_SSL_VERIFYPEER, 0); 
 	curl_setopt( $chOne, CURLOPT_POST, 1); 
-	curl_setopt( $chOne, CURLOPT_POSTFIELDS, "message=".$sMessage.$data); 
+	curl_setopt( $chOne, CURLOPT_POSTFIELDS, "message=".$sMessage); 
 	$headers = array( 'Content-type: application/x-www-form-urlencoded', 'Authorization: Bearer '.$sToken.'', );
 	curl_setopt($chOne, CURLOPT_HTTPHEADER, $headers); 
 	curl_setopt( $chOne, CURLOPT_RETURNTRANSFER, 1); 
