@@ -10,8 +10,8 @@
 	date_default_timezone_set("Asia/Bangkok");
 
 	$sToken = "C3bnBm2FevZAVCXFkA7LYNnKwPQ70zSinHjKy4yFNmT";
-	$sMessage = "ทดสอบข้อความฉุกเฉิน";
-
+	//$sMessage = "ทดสอบข้อความฉุกเฉิน";
+	$sMessage = $id + $name + "ทดสอบส่งข้อความ";
 	
 	$chOne = curl_init(); 
 	curl_setopt( $chOne, CURLOPT_URL, "https://notify-api.line.me/api/notify"); 
