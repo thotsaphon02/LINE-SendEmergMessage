@@ -1,7 +1,7 @@
 <?php
 
-	$id = $_POST['id'];
-    	$name = $_POST['name'];
+	$data = $_POST['data'];
+    	//$name = $_POST['name'];
 
 
 	ini_set('display_errors', 1);
@@ -11,7 +11,7 @@
 
 	$sToken = "C3bnBm2FevZAVCXFkA7LYNnKwPQ70zSinHjKy4yFNmT";
 	//$sMessage = "ทดสอบข้อความฉุกเฉิน";
-	$sMessage = $id + $name + "ทดสอบส่งข้อความ";
+	$sMessage = " ข้อความฉุกเฉิน !! $data"
 	
 	$chOne = curl_init(); 
 	curl_setopt( $chOne, CURLOPT_URL, "https://notify-api.line.me/api/notify"); 
